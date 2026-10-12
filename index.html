@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Produtos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Cadastro de Produtos</h1>
+    <p>Cadastre, consulte, edite e exclua produtos.</p>
+
+    <form id="formProduto">
+      <input type="hidden" id="id">
+
+      <label for="nome">Nome do produto</label>
+      <input id="nome" type="text" placeholder="Ex.: Mouse" required>
+
+      <label for="valor">Valor (R$)</label>
+      <input id="valor" type="number" min="0" step="0.01"
+             placeholder="Ex.: 80.00" required>
+
+      <label for="quantidade">Quantidade</label>
+      <input id="quantidade" type="number" min="0" step="1"
+             placeholder="Ex.: 10" required>
+
+      <label for="cor">Cor</label>
+      <input id="cor" type="text" placeholder="Ex.: Preto">
+
+      <div class="acoes">
+        <button type="submit" id="btnSalvar">Cadastrar produto</button>
+        <button type="button" id="btnCancelar" hidden>Cancelar edição</button>
+      </div>
+    </form>
+
+    <h2>Produtos cadastrados</h2>
+    <p id="mensagem" role="status"></p>
+    <div id="listaProdutos"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
