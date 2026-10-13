@@ -11,5 +11,5 @@ const produtosRoutes = require("./routes/produtos");
 app.use("/produtos", produtosRoutes);
 
 app.listen(port, () => {
-    console.log(`Servidor em http://localhost:${port}`);
+    console.log(`Servidor em https://maxueljr10.github.io/crud-express:${port}`);
 });
